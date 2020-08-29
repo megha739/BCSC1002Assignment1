@@ -4,6 +4,4 @@
 package definitions;
 public class Library{
 
-}
-
-
+ }
