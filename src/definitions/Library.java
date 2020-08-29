@@ -2,6 +2,7 @@
   *  File Name : Library.java
   * */
  package definitions;
+
  import java.util.Arrays;
 
  public class Library {
@@ -43,5 +44,27 @@
      @Override
      public int hashCode() {
          return Arrays.hashCode(getBooksCurrentlyAvailable());
+     }
+
+     /**
+      * THIS METHOD HELPS  TO STORE THE BOOKS IN THE LIBRARY .
+      */
+
+     public void addBooks(String bookName) {
+         System.out.println(bookName + ",is added Succefully.");
+     }
+
+     /**
+      * THIS METHOD ALLOWS TO ISSUE A BOOK FROM THE LIBRARY
+      */
+     public void doIssue(String bookName) {
+         System.out.println(bookName + ",is issued to you successfully.");
+     }
+
+     /**
+      * THIS METHOD HELPS TO RETURN THE ISSUED BOOK
+      */
+     public void doReturn(String bookName) {
+         System.out.println(bookName + ",is returned Successfully.");
      }
  }
