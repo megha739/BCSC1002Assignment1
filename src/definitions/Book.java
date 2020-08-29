@@ -20,4 +20,28 @@ public class Book {
         this.nameOfAuthor = nameOfAuthor;
         this.isbnNumberOfBook = isbnNumberOfBook;
     }
+
+    public String getNameOfBook() {
+        return nameOfBook;
+    }
+
+    public String getNameOfAuthor() {
+        return nameOfAuthor;
+    }
+
+    public String getIsbnNumberOfBook() {
+        return isbnNumberOfBook;
+    }
+
+    public void setNameOfBook(String nameOfBooks) {
+        this.nameOfBook = nameOfBooks;
+    }
+
+    public void setNameOfAuthor(String nameOfAuthors) {
+        this.nameOfAuthor = nameOfAuthors;
+    }
+
+    public void setIsbnNumberOfBook(String isbnNumberOfBooks) {
+        this.isbnNumberOfBook = isbnNumberOfBooks;
+    }
 }
