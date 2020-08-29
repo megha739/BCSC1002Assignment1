@@ -52,4 +52,13 @@ public class Book {
     public void doReturn() {
         System.out.println("THANK YOU FOR RETURNING THE BOOK.");
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "nameOfBook='" + nameOfBook + '\'' +
+                ", nameOfAuthor='" + nameOfAuthor + '\'' +
+                ", isbnNumberOfBook='" + isbnNumberOfBook + '\'' +
+                '}';
+    }
 }
