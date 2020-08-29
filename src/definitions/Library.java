@@ -51,7 +51,7 @@
       */
 
      public void addBooks(String bookName) {
-         System.out.println(bookName + ",is added Succefully.");
+         System.out.println(bookName + ",is added successfully.");
      }
 
      /**
@@ -66,5 +66,14 @@
       */
      public void doReturn(String bookName) {
          System.out.println(bookName + ",is returned Successfully.");
+     }
+
+     /**
+      * this method helps to Print all the elements Of the Arrays.
+      */
+     public void listBooks() {
+         for (Book book : this.booksCurrentlyAvailable) {
+             System.out.println(book);
+         }
      }
  }
