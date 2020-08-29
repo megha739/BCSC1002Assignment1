@@ -33,15 +33,23 @@ public class Book {
         return isbnNumberOfBook;
     }
 
-    public void setNameOfBook(String nameOfBooks) {
-        this.nameOfBook = nameOfBooks;
+    public void setNameOfBook(String nameOfBook) {
+        this.nameOfBook = nameOfBook;
     }
 
-    public void setNameOfAuthor(String nameOfAuthors) {
-        this.nameOfAuthor = nameOfAuthors;
+    public void setNameOfAuthor(String nameOfAuthor) {
+        this.nameOfAuthor = nameOfAuthor;
     }
 
     public void setIsbnNumberOfBook(String isbnNumberOfBooks) {
         this.isbnNumberOfBook = isbnNumberOfBooks;
+    }
+
+    public void doIssue() {
+        System.out.println(nameOfBook + "Successfully issued to you");
+    }
+
+    public void doReturn() {
+        System.out.println("THANK YOU FOR RETURNING THE BOOK.");
     }
 }
