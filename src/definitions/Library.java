@@ -57,14 +57,14 @@
      /**
       * THIS METHOD ALLOWS TO ISSUE A BOOK FROM THE LIBRARY
       */
-     public void doIssue(String bookName) {
+     public static void doIssue(String bookName) {
          System.out.println(bookName + ",is issued to you successfully.");
      }
 
      /**
       * THIS METHOD HELPS TO RETURN THE ISSUED BOOK
       */
-     public void doReturn(String bookName) {
+     public static void doReturn(String bookName) {
          System.out.println(bookName + ",is returned Successfully.");
      }
 
