@@ -3,6 +3,7 @@
  * */
 package execution;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import definitions.Book;
@@ -19,17 +20,17 @@ public class FrontDesk {
         Scanner scanner = new Scanner(System.in);
         int studentInput;
         Student studentDetails = new Student();
-        System.out.println(" enter your first name");
-        String firstName = scanner.nextLine();
-        System.out.println("ENTER YOUR MIDDLE NAME:");
-        String middleName = scanner.nextLine();
-        System.out.println("ENTER YOUR LAST NAME:");
-        String lastName = scanner.nextLine();
-        System.out.println("ENTER YOUR ROLL NUMBER:");
-        Long rollNumber = scanner.nextLong();
+        System.out.println("PLEASE ENTER YOUR FIRST NAME:");
+        String firstNameOfStudent = scanner.nextLine();
+        System.out.println("PLEASE ENTER YOUR MIDDLE NAME:");
+        String middleNameOfStudent = scanner.nextLine();
+        System.out.println("PLEASE ENTER YOUR LAST NAME:");
+        String lastNameOfStudent = scanner.nextLine();
+        System.out.println("PLEASE ENTER YOUR ROLL NUMBER:");
+        Long universityRollNumber = scanner.nextLong();
         scanner.nextLine();
         do {
-            System.out.println("-=-=--=-=-\"Welcome," + firstName + ",To The Front Desk\"-=-=--=-=-");
+            System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
             System.out.println("How may I help you today?");
             System.out.println("1. Issue a new book for me.");
             System.out.println("2. Return a previously issues book for me.");
@@ -38,29 +39,30 @@ public class FrontDesk {
             System.out.println("ENTER YOUR CHOICE FROM: (1...4):");
             studentInput = scanner.nextInt();
             switch (studentInput) {
-                case ISSUE_A_BOOK:
+                case ISSUE_A_BOOK -> {
                     System.out.println("ENTER THE NAME OF BOOK, YOU WANT TO ISSUE:");
                     scanner.nextLine();
                     String nameOfBook = scanner.nextLine();
                     Library.doIssue(nameOfBook);
-                    break;
-                case RETURN_PREVIOUSLY_ISSUED_BOOKS:
+                }
+                case RETURN_PREVIOUSLY_ISSUED_BOOKS -> {
                     System.out.println("ENTER THE NAME OF BOOK,YOU WANT TO RETURN:");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
                     Library.doReturn(bookName);
-                    break;
-                case SHOW_ALL_BOOKS_ISSUED:
+                }
+                case SHOW_ALL_BOOKS_ISSUED -> {
                     System.out.println("ENTER THE NUMBER OF BOOKS ISSUED");
                     scanner.nextLine();
                     int numberOfBooksIssued;
+                    scanner.nextLine();
+                    Book[] booksIssuedByStudent = studentDetails.getBooksIssuedByStudent();
                     studentDetails.getBooksIssuedByStudent();
-                    break;
-                default:
-                    System.out.println("PLEASE CHOOSE THE CORRECT OPTION???");
+                    System.out.println("Books Issued By Student:" + " " + Arrays.toString(booksIssuedByStudent));
+                }
+                default -> System.out.println("please enter correct choices");
             }
         } while (studentInput != 4);
         scanner.close();
-
     }
 }
